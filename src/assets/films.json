@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "title": "A New Hope",
+      "id": 1,
+      "director": "George Lucas",
+      "producer": "Gary Kurtz, Rick McCallum",
+      "imgURL": ""
+    },
+    {
+      "title": "The Empire Strikes Back",
+      "id": 2,
+      "director": "Irvin Kershne",
+      "producer": "Gary Kurtz, Rick McCallum",
+      "imgURL": ""
+    },
+    {
+      "title": "Return of the Jedi",
+      "id": 3,
+      "director": "Richard Marquand",
+      "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
+      "imgURL": ""
+    },
+    {
+      "title": "The Phantom Menace",
+      "id": 4,
+      "director": "George Lucas",
+      "producer": "Rick McCallum",
+      "imgURL": ""
+    },
+    {
+      "title": "Attack of the Clones",
+      "id": 5,
+      "director": "George Lucas",
+      "producer": "Rick McCallum",
+      "imgURL": ""
+    },
+    {
+      "title": "Revenge of the Sith",
+      "id": 6,
+      "director": "George Lucas",
+      "producer": "Gary Kurtz, Rick McCallum",
+      "imgURL": ""
+    }
+  ]
+}
