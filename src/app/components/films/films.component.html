@@ -1,0 +1,26 @@
+  <mat-list class="container">
+    <mat-tab-group mat-align-tabs="center">
+      <div *ngFor="let day of getDaysOfWeek()">
+        <mat-tab label="{{day}}">
+          <mat-list-item class = 'content' style="height: 150px" *ngFor="let film of findFilmsByDay(repertuire[day]) ">
+            <div class = 'container'>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>
+                    <div>{{film.title}}</div>
+                  </mat-card-title>
+                </mat-card-header>
+              <mat-card-content style="padding-left: 15px" >
+                <p mat-line>{{film.director}}</p>
+                <p mat-line>{{film.producer}}</p>
+              </mat-card-content>
+            </mat-card>
+            </div>
+          </mat-list-item> 
+        </mat-tab>
+      </div>
+    </mat-tab-group>
+    <div class="spinner" *ngIf="films.length === 0">
+      <mat-spinner></mat-spinner>
+    </div>
+  </mat-list>  
