@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from '@angular/router';
-import {FilmsComponent} from "./components/films/films.component";
-import {FilmDetailsComponent} from "./components/film-details/film-details.component";
+import { RouterModule, Routes } from '@angular/router';
+import { FilmsComponent } from "./components/films/films.component";
+import { FilmDetailsComponent } from "./components/film-details/film-details.component";
+import { BookingComponent } from './components/booking/booking.component';
 
-const app_routes: Routes = [
+const routes: Routes = [
   { path: '', pathMatch: 'full', component: FilmsComponent },
-  { path: 'filmDetails', pathMatch: 'full', component: FilmDetailsComponent },
+  { path: 'filmDetails/:id', pathMatch: 'full', component: FilmDetailsComponent },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(app_routes)],
-  exports: [ RouterModule ],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
   providers: []
 })
 export class AppRoutingModule { }
