@@ -1,7 +1,10 @@
 export interface IFilm{
   id: number
-  director: any;
-  producer: any;
   title: string;
+  director: string;
+  producer: string;
+  playtime: number;
+  genre: string;
+  imgURL: string;
 }
 

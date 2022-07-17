@@ -5,42 +5,54 @@
       "id": 1,
       "director": "George Lucas",
       "producer": "Gary Kurtz, Rick McCallum",
-      "imgURL": ""
+      "imgURL": "https://images-na.ssl-images-amazon.com/images/I/81aA7hEEykL.jpg",
+      "genre": "Fantasy",
+      "playtime": 123
     },
     {
       "title": "The Empire Strikes Back",
       "id": 2,
       "director": "Irvin Kershne",
       "producer": "Gary Kurtz, Rick McCallum",
-      "imgURL": ""
+      "imgURL": "https://m.media-amazon.com/images/I/61mVAe9vAtL._AC_SY741_.jpg",
+      "genre": "Fantasy",
+      "playtime": 107
     },
     {
       "title": "Return of the Jedi",
       "id": 3,
       "director": "Richard Marquand",
       "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
-      "imgURL": ""
+      "imgURL": "https://m.media-amazon.com/images/I/51x2FpiS-UL.jpg",
+      "genre": "Fantasy",
+      "playtime": 111
     },
     {
       "title": "The Phantom Menace",
       "id": 4,
       "director": "George Lucas",
       "producer": "Rick McCallum",
-      "imgURL": ""
+      "imgURL": "https://images-na.ssl-images-amazon.com/images/I/91NrqPMwWqL._RI_.jpg",
+      "genre": "Fantasy",
+      "playtime": 130
     },
     {
       "title": "Attack of the Clones",
       "id": 5,
       "director": "George Lucas",
       "producer": "Rick McCallum",
-      "imgURL": ""
+      "imgURL": "https://images-na.ssl-images-amazon.com/images/I/91WTnoEb7RL._RI_.jpg",
+      "genre": "Fantasy",
+      "playtime": 112
     },
     {
       "title": "Revenge of the Sith",
       "id": 6,
       "director": "George Lucas",
       "producer": "Gary Kurtz, Rick McCallum",
-      "imgURL": ""
+      "imgURL": "https://m.media-amazon.com/images/I/51nf44elBJL.jpg",
+      "genre": "Fantasy",
+      "playtime": 102
     }
   ]
 }
