@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 900px;
+}
+
+.cinema {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.screen {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  background-color: midnightblue;
+  color: wheat;
+  width: 100%;
+}
+
+.seat {
+  appearance: none;
+  margin: 12px 8px;
+  border-radius: 2px;
+  background-color: rgb(243, 243, 243);
+  border: 1px rgb(194, 194, 194) solid;
+  border-top: 0px;
+  padding: 6px 10px;
+}
+
+.seat:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transform: scale(1.1);
+}
+
+.buy {
+  appearance: none;
+  border: 1px solid rgb(224, 224, 224);
+  display: block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  border-radius: 8px;
+  background: #3d6bb1;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.buy:disabled {
+  opacity: 0.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-element {
+  padding: 5px 0px 25px 2px;
+  width: 100%;
+}
