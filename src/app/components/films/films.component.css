@@ -4,29 +4,17 @@ mat-toolbar {
 
 .container {
   display: flex;
-  height: 100%;
-  width: 100%;
   flex-direction: column;
 }
 
-.spinner{
+.mat-list-base .mat-list-item {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
   align-self: center;
   padding-top: 25%;
-}
-
-.content {
-  padding: 10px;
-}
-
-.content>mat-card {
-  margin-bottom: 16px;
-}
-
-.is-focusable {
-  cursor: pointer;
-}
-
-.column-label {
-  margin-right: 8px;
-  font-size: 1rem;
 }
