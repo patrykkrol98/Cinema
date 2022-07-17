@@ -1,0 +1,22 @@
+<mat-card routerLink="/filmDetails/{{film.id}}" class="film-card">
+    <mat-card-content class="card-image">
+      <img
+        mat-card-image
+        src="{{film.imgURL}}"
+      />
+    </mat-card-content>
+      <mat-card-content class="card-content">
+        <h1>{{ film.title }}</h1>
+      <hr>
+        <div class="subtitles">
+          <h3>{{film.genre}} |</h3>
+          <h3>| {{film.playtime}} minutes</h3>
+        </div>
+      </mat-card-content>
+      <mat-card-content class="card-content-director">
+        <h4>Director</h4>
+        <h1>{{ film.director }}</h1>
+        <h4>Producer</h4>
+        <h1>{{ film.producer}}</h1>
+      </mat-card-content>
+  </mat-card>
