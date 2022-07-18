@@ -1,27 +1,64 @@
-# MovieTicketManagement
+# Cinema
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+> Don't waste time queuing, choose one of the movies and make a reservation - it's easy!
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Contact](#contact)
 
-## Code scaffolding
+## General Information
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This application allows you to view movies in the cinema, make reservations for a given day, time and choose as many seats as you need
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+* Using Angular Material Components
 
-## Running unit tests
+## Screenshots
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Main page of application
 
-## Running end-to-end tests
+![Example screenshot](./img/img1.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Seat selection
 
-## Further help
+![Example screenshot](./img/img2.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Summary of reseration
+
+![Example screenshot](./img/img2.png)
+
+## Setup
+
+Run `npm install` to load all necessary dependencies.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Project Status
+
+Project is: _in progress_
+
+## Room for Improvement
+
+Connect to database, finish reservation with sending email to user 
+
+Room for improvement:
+
+* Build own API to connect
+
+To do:
+
+* unit, e2e tests
+
+## Contact
+
+Created by Patryk Król
+
+[Linkedin](https://www.linkedin.com/in/patryk-krol/) or 📧 : patrtyk.krol.98@gmail.com
