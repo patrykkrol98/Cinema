@@ -33,7 +33,7 @@ This application allows you to view movies in the cinema, make reservations for 
 
 ### Summary of reseration
 
-![Example screenshot](./img/img2.png)
+![Example screenshot](./img/img3.png)
 
 ## Setup
 
