@@ -17,10 +17,7 @@ constructor(private dataService: DataServiceService) {
 
 ngOnInit(): void {
   this.dataService.getFilms().subscribe((films) => {
-    // imitate server delay
-    setTimeout(()=>{
       this.films = films
-    }, 2500)
   });
   this.dataService.getRepertuire().subscribe(repertuire => {
     this.repertuire = repertuire;

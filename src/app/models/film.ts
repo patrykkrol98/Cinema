@@ -6,5 +6,6 @@ export interface IFilm{
   playtime: number;
   genre: string;
   imgURL: string;
+  hours: number[];
 }
 

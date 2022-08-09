@@ -1,28 +1,23 @@
 <div class="container" *ngIf="film">
   <div class="movie-card">
     <div class="container">
-      <img
-        src="{{film.imgURL}}"
-        alt="cover"
-        class="cover"
-      />
+      <img src="{{ film.imgURL }}" alt="cover" class="cover" />
       <div class="hero">
         <img src="" alt="" />
         <div class="details">
-          <div class="title1">{{film.title}}</div>
+          <div class="title1">{{ film.title }}</div>
         </div>
       </div>
       <div class="description">
         <div class="column1">
-          <span class="tag" (click)="openDialog()">17:00</span>
-          <span class="tag" (click)="openDialog()">19:00</span>
-          <span class="tag" (click)="openDialog()">21:00</span>
+          <div *ngFor="let hour of film.hours">
+            <span class="tag" (click)="openDialog()">{{ hour.toFixed(2) }}</span>
+          </div>
         </div>
         <div class="column2">
-          {{film.director}} |
-          {{film.producer}} |
-          {{film.playtime}} minutes|
-          {{film.genre}}
+          {{ film.director }} | {{ film.producer }} |
+          {{ film.playtime }} minutes|
+          {{ film.genre }}
         </div>
       </div>
     </div>
@@ -31,5 +26,7 @@
 
 <div class="wrong" *ngIf="film == undefined">
   Oops, something went wrong!
-    <button mat-raised-button color="primary" routerLink="/">Back to main page</button>
+  <button mat-raised-button color="primary" routerLink="/">
+    Back to main page
+  </button>
 </div>
