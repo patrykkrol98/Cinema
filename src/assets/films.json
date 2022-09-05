@@ -7,7 +7,8 @@
       "producer": "Gary Kurtz, Rick McCallum",
       "imgURL": "https://images-na.ssl-images-amazon.com/images/I/81aA7hEEykL.jpg",
       "genre": "Fantasy",
-      "playtime": 123
+      "playtime": 123,
+      "hours": [17, 19, 21]
     },
     {
       "title": "The Empire Strikes Back",
@@ -16,7 +17,8 @@
       "producer": "Gary Kurtz, Rick McCallum",
       "imgURL": "https://m.media-amazon.com/images/I/61mVAe9vAtL._AC_SY741_.jpg",
       "genre": "Fantasy",
-      "playtime": 107
+      "playtime": 107,
+      "hours": [17, 19, 21]
     },
     {
       "title": "Return of the Jedi",
@@ -25,7 +27,8 @@
       "producer": "Howard G. Kazanjian, George Lucas, Rick McCallum",
       "imgURL": "https://m.media-amazon.com/images/I/51x2FpiS-UL.jpg",
       "genre": "Fantasy",
-      "playtime": 111
+      "playtime": 111,
+      "hours": [17, 19, 21]
     },
     {
       "title": "The Phantom Menace",
@@ -34,7 +37,8 @@
       "producer": "Rick McCallum",
       "imgURL": "https://images-na.ssl-images-amazon.com/images/I/91NrqPMwWqL._RI_.jpg",
       "genre": "Fantasy",
-      "playtime": 130
+      "playtime": 130,
+      "hours": [17, 19, 21]
     },
     {
       "title": "Attack of the Clones",
@@ -43,7 +47,8 @@
       "producer": "Rick McCallum",
       "imgURL": "https://images-na.ssl-images-amazon.com/images/I/91WTnoEb7RL._RI_.jpg",
       "genre": "Fantasy",
-      "playtime": 112
+      "playtime": 112,
+      "hours": [17, 19, 21]
     },
     {
       "title": "Revenge of the Sith",
@@ -52,7 +57,8 @@
       "producer": "Gary Kurtz, Rick McCallum",
       "imgURL": "https://m.media-amazon.com/images/I/51nf44elBJL.jpg",
       "genre": "Fantasy",
-      "playtime": 102
+      "playtime": 102,
+      "hours": [17, 19, 21]
     }
   ]
 }
