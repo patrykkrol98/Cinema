@@ -1,9 +1,10 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { map, reduce, scan, share, startWith, tap } from 'rxjs/operators';
+import { map, scan, share, startWith, tap } from 'rxjs/operators';
 import { IFilm } from 'src/app/models/film';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 const registerSeats = (selected: Set<number>, seat: number) => {
   if (selected.has(seat)) {
@@ -27,7 +28,7 @@ export class BookingComponent implements OnInit {
   selectSeat$ = new Subject<number>();
   summarySeats!: string;
 
-  constructor(private formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: IFilm) { }
+  constructor(private formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: IFilm,  private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
@@ -61,8 +62,9 @@ export class BookingComponent implements OnInit {
       seats: this.summarySeats.split(', '),
       cost: this.seatsCost()
     }
-    console.log(summary);
+    
+    this._snackBar.open(`Email with detials sent to ${summary.userData.email}, enjoy the movie!`, "Close");
   }
 
-  seatsCost() {return this.summarySeats.split(', ').length * 15}
+  seatsCost() { return this.summarySeats.split(', ').length * 15 }
 }
