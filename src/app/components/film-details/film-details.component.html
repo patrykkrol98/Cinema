@@ -1,32 +1,29 @@
 <div class="container" *ngIf="film">
-  <div class="movie-card">
-    <div class="container">
-      <img src="{{ film.imgURL }}" alt="cover" class="cover" />
-      <div class="hero">
-        <img src="" alt="" />
-        <div class="details">
-          <div class="title1">{{ film.title }}</div>
-        </div>
+  <mat-card class="film-card">
+    <mat-card-header>
+      <mat-card-title>{{ film.title }}</mat-card-title>
+      <mat-card-subtitle>{{ film.director }}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="card-content">
+      <div class="column-1">
+        <img [src]="film.imgURL" alt="cover" />
       </div>
-      <div class="description">
-        <div class="column1">
-          <div *ngFor="let hour of film.hours">
+      <div class="column-2">
+        <p>Playtime: {{ film.playtime }} minutes</p>
+        <p>Genre: {{ film.genre }}</p>
+        <p>Book your ticket now:</p>
+        <div class="hours">
+          <div *ngFor="let hour of film.hours" >
             <span class="tag" (click)="openDialog()">{{ hour.toFixed(2) }}</span>
           </div>
         </div>
-        <div class="column2">
-          {{ film.director }} | {{ film.producer }} |
-          {{ film.playtime }} minutes|
-          {{ film.genre }}
-        </div>
       </div>
     </div>
+  </mat-card>
+  <div class="wrong" *ngIf="film == undefined">
+    Oops, something went wrong!
+    <button mat-raised-button color="primary" routerLink="/">
+      Back to main page
+    </button>
   </div>
-</div>
-
-<div class="wrong" *ngIf="film == undefined">
-  Oops, something went wrong!
-  <button mat-raised-button color="primary" routerLink="/">
-    Back to main page
-  </button>
 </div>

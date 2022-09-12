@@ -2,11 +2,11 @@
   <mat-tab-group mat-align-tabs="center" dynamicHeight>
     <div *ngFor="let day of getDaysOfWeek()">
       <mat-tab label="{{ day }}">
-        <mat-list-item
-          class="film-card-container"
-          *ngFor="let film of findFilmsByDay(repertuire[day])">
-          <app-film-card [film]="film" ></app-film-card>
-        </mat-list-item>
+        <div class="film-cards-container">
+          <mat-list-item *ngFor="let film of findFilmsByDay(repertuire[day])">
+            <app-film-card [film]="film"></app-film-card>
+          </mat-list-item>
+        </div>
       </mat-tab>
     </div>
   </mat-tab-group>

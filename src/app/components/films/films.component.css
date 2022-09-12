@@ -2,9 +2,10 @@ mat-toolbar {
   justify-content: space-between;
 }
 
-.container {
+.film-cards-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .mat-list-base .mat-list-item {

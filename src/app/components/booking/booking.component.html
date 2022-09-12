@@ -1,41 +1,69 @@
 <div class="container">
   <ng-container *ngIf="!summaryIndicator; else summary">
-    <h3>Choose your seats</h3>
-    <div class="screen">Screen</div>
-    <section class="cinema">
-      <button
-        *tuiRepeatTimes="let index of 100"
-        class="seat"
-        (click)="selectSeat$.next(index + 1)"
-      >
-        {{ index + 1 }}
-      </button>
-    </section>
+    <div class="seat-selection">
+      <h3>Choose your seats</h3>
+      <div class="screen">Screen</div>
+      <section class="cinema">
+        <button
+          *tuiRepeatTimes="let index of 100"
+          class="seat"
+          (click)="selectSeat$.next(index + 1)"
+        >
+          {{ index + 1 }}
+        </button>
+      </section>
 
-    <ng-container *ngIf="selectedMessage$ | async as message">
-      Selected: {{ message }}
+      <ng-container *ngIf="selectedMessage$ | async as message">
+        Selected: {{ message }}
 
-      <button class="buy" [disabled]="message === noneMessage" (click)="book()">
-        Buy
-      </button>
-    </ng-container>
+        <button
+          class="buy"
+          [disabled]="message === noneMessage"
+          (click)="book()"
+        >
+          Buy
+        </button>
+      </ng-container>
+    </div>
   </ng-container>
   <ng-template #summary>
-    <h1>{{data.title}} | {{data.director}} | {{data.playtime}} minutes</h1>
-    <h1>Your Seats: {{summarySeats}} = {{seatsCost()}}$</h1>
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
-      <mat-form-field class="form-element">
-        <input matInput placeholder="Name" formControlName="name">
-      </mat-form-field>
-      <mat-form-field class="form-element">
-        <input matInput placeholder="Email address" formControlName="email">
-        <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
-          {{ getErrorEmail() }}
-        </mat-error>
-      </mat-form-field>
-      <div class="form-element">
-        <button mat-dialog-close mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit Form</button>
-      </div>
-    </form>
+    <div class="summary">
+      <h1>
+        {{ data.title }} | {{ data.director }} | {{ data.playtime }} minutes
+      </h1>
+      <h1>Your Seats: {{ summarySeats }} = {{ seatsCost() }}$</h1>
+      <form
+        [formGroup]="formGroup"
+        (ngSubmit)="onSubmit(formGroup.value)"
+        class="form"
+      >
+        <mat-form-field class="form-element">
+          <input matInput placeholder="Name" formControlName="name" />
+        </mat-form-field>
+        <mat-form-field class="form-element">
+          <input matInput placeholder="Email address" formControlName="email" />
+          <mat-error
+            *ngIf="
+              !formGroup.controls['email'].valid &&
+              formGroup.controls['email'].touched
+            "
+          >
+            {{ getErrorEmail() }}
+          </mat-error>
+        </mat-form-field>
+        <div class="form-element">
+          <button
+            mat-dialog-close
+            mat-raised-button
+            color="primary"
+            type="submit"
+            class="button"
+            [disabled]="!formGroup.valid"
+          >
+            Submit Form
+          </button>
+        </div>
+      </form>
+    </div>
   </ng-template>
 </div>

@@ -1,22 +1,12 @@
-<mat-card routerLink="/filmDetails/{{film.id}}" class="film-card">
-    <mat-card-content class="card-image">
-      <img
-        mat-card-image
-        src="{{film.imgURL}}"
-      />
-    </mat-card-content>
-      <mat-card-content class="card-content">
-        <h1>{{ film.title }}</h1>
-      <hr>
-        <div class="subtitles">
-          <h3>{{film.genre}} |</h3>
-          <h3>| {{film.playtime}} minutes</h3>
-        </div>
-      </mat-card-content>
-      <mat-card-content class="card-content-director">
-        <h4>Director</h4>
-        <h1>{{ film.director }}</h1>
-        <h4>Producer</h4>
-        <h1>{{ film.producer}}</h1>
-      </mat-card-content>
-  </mat-card>
+<mat-card routerLink="/filmDetails/{{ film.id }}" class="film-card">
+  <mat-card-header>
+    <mat-card-title>{{ film.title }}</mat-card-title>
+    <mat-card-subtitle>{{ film.director }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="film.imgURL" alt="cover" />
+  <mat-card-content>
+    <p>Playtime: {{ film.playtime }} minutes</p>
+    <p>Genre: {{ film.genre }}</p>
+    <p>Producer: {{ film.producer }}</p>
+  </mat-card-content>
+</mat-card>
